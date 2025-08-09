@@ -38,6 +38,7 @@ export default function MenuPage() {
               <div className="text-sm text-zinc-500">{m.price.toFixed(2)}</div>
             </div>
             <button
+              type="button"
               className="px-3 py-1 rounded-md bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
               onClick={() => add({ id: m.id, name: m.name, price: m.price })}
             >

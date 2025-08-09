@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useSupabase } from '../lib/useSupabase'
 import { useCartStore } from '../store/cart'
-import { useUser } from '@clerk/clerk-react'
+import { useUser, useAuth } from '@clerk/clerk-react'
 
 export default function CheckoutPage() {
   const supabase = useSupabase()
   const { user } = useUser()
+  const { getToken } = useAuth()
   const { items, clear } = useCartStore()
   const [pickupTime, setPickupTime] = useState<string>('ASAP')
   const [shareLocation, setShareLocation] = useState(false)
@@ -31,11 +32,13 @@ export default function CheckoutPage() {
         share_location: shareLocation,
       }
 
-      const resp = await fetch('/functions/v1/create_order', {
+      const functionsUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/create_order`
+      const clerkJwt = await getToken({ template: 'supabase' })
+      const resp = await fetch(functionsUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${await supabase.auth.getSession().then((r) => r.data.session?.access_token ?? '')}`,
+          Authorization: `Bearer ${clerkJwt}`,
         },
         body: JSON.stringify(payload),
       })

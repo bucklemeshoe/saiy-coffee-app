@@ -6,13 +6,10 @@ export function createSupabaseWithExternalAuth(
   const url = import.meta.env.VITE_SUPABASE_URL as string
   const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
 
-  return createClient(url, anonKey, {
+  const client = createClient(url, anonKey, {
     global: {
-      fetch: async (input, init) => {
-        const token = await getClerkToken()
-        const headers = new Headers(init?.headers)
-        if (token) headers.set('Authorization', `Bearer ${token}`)
-        return fetch(input, { ...init, headers })
+      headers: {
+        apikey: anonKey,
       },
     },
     auth: {
@@ -21,5 +18,15 @@ export function createSupabaseWithExternalAuth(
       detectSessionInUrl: false,
     },
   })
+
+  // Inject Clerk token per request using PostgREST "Authorization" header
+  client.rest.fetch = async (input: RequestInfo, init?: RequestInit) => {
+    const token = await getClerkToken()
+    const headers = new Headers(init?.headers)
+    if (token) headers.set('Authorization', `Bearer ${token}`)
+    return fetch(input as any, { ...init, headers })
+  }
+
+  return client
 }
 

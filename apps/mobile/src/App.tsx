@@ -1,7 +1,7 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 import { Link, Route, Routes } from 'react-router-dom'
 import { useAuth } from '@clerk/clerk-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { createSupabaseWithExternalAuth } from '@saiy/lib'
 import MenuPage from './pages/Menu'
 import CartPage from './pages/Cart'
@@ -53,6 +53,10 @@ function App() {
         </nav>
       </header>
       <main className="p-4">
+        <nav className="mb-4 flex gap-3 text-sm">
+          <Link to="/menu" className="underline">Menu</Link>
+          <Link to="/cart" className="underline">Cart</Link>
+        </nav>
         <Routes>
           <Route
             path="/"
