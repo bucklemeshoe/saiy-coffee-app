@@ -1,18 +1,63 @@
 {
   "name": "saiy-coffee-monorepo",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "dev:mobile": "npm --workspace mobile run dev",
-    "dev:admin": "npm --workspace admin run dev",
     "build": "npm run build -w mobile && npm run build -w admin",
+    "dev:admin": "npm --workspace admin run dev",
+    "dev:mobile": "npm --workspace mobile run dev",
     "lint": "echo 'No linter configured yet'"
   },
+  "dependencies": {
+    "@clerk/clerk-react": "latest",
+    "@eslint/js": "latest",
+    "@headlessui/react": "latest",
+    "@heroicons/react": "latest",
+    "@radix-ui/react-dropdown-menu": "latest",
+    "@radix-ui/react-tabs": "latest",
+    "@saiy/lib": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react-swc": "latest",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "jiti": "latest",
+    "less": "latest",
+    "lightningcss": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "15.2.4",
+    "path": "latest",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-router-dom": "latest",
+    "sass": "latest",
+    "sass-embedded": "latest",
+    "stylus": "latest",
+    "sugarss": "latest",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "terser": "latest",
+    "tsx": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "vite": "latest",
+    "yaml": "latest"
+  },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11"
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5",
+    "typescript": "^5"
   }
 }

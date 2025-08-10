@@ -29,4 +29,3 @@ export const TabsContent = React.forwardRef<
   <TabsPrimitive.Content ref={ref} className={cn("outline-none", className)} {...props} />
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
-

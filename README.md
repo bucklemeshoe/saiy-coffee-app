@@ -38,7 +38,7 @@ This branch contains only the admin dashboard components for styling with V0.
 
 ## Return to Main
 After styling, merge changes back to main branch:
-```bash
+\`\`\`bash
 git checkout main
 git merge v0-admin-styling
-```
+\`\`\`

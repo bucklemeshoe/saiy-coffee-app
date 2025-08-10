@@ -260,4 +260,3 @@ function EmptyOrGrid({ title, description, orders }: { title: string; descriptio
     </div>
   )
 }
-
