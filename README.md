@@ -2,6 +2,8 @@
 
 This branch contains only the admin dashboard components for styling with V0.
 
+**Last Updated**: Ready for V0 styling work!
+
 ## Components Included
 
 - `apps/admin/src/pages/AdminPage.tsx` - Main dashboard with order management
