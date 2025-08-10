@@ -214,12 +214,142 @@ Goal: Use **Clerk** for auth while keeping Supabase RLS secure.
 
 ---
 
-## Environment Variables
-- `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
-- `CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KEY` (admin/backend)
+## Environment Management: Local vs Cloud
+
+### Local Development (Recommended for Development)
+**Prerequisites:**
+- Docker Desktop running
+- Supabase CLI via npx
+
+**Setup Local Environment:**
+```bash
+# Start local Supabase stack
+npx supabase start
+
+# Reset database with migrations + seed data
+npx supabase db reset
+```
+
+**Local Environment Variables (.env files):**
+```bash
+# apps/mobile/.env & apps/admin/.env
+VITE_SUPABASE_URL=http://127.0.0.1:54321
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0
+VITE_SUPABASE_EXTERNAL_JWT=false
+VITE_CLERK_PUBLISHABLE_KEY=pk_test_...
+```
+
+**Local URLs:**
+- **Mobile App**: http://localhost:5173
+- **Admin App**: http://localhost:5174  
+- **Supabase Studio**: http://127.0.0.1:54323
+- **Database**: postgresql://postgres:postgres@127.0.0.1:54322/postgres
+
+**Benefits:**
+- ✅ Faster development (no network latency)
+- ✅ Work offline
+- ✅ Full database access via Studio
+- ✅ Menu loads without authentication
+- ✅ Reset data anytime with `npx supabase db reset`
+
+### Cloud/Production Environment
+**Setup Cloud Environment:**
+1. Deploy migrations in Supabase Dashboard → SQL Editor
+2. Deploy Edge Functions in Supabase Dashboard → Edge Functions
+3. Configure Clerk JWT integration (JWT template + Supabase external auth)
+
+**Cloud Environment Variables (.env files):**
+```bash
+# apps/mobile/.env & apps/admin/.env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+VITE_SUPABASE_EXTERNAL_JWT=true
+VITE_CLERK_PUBLISHABLE_KEY=pk_live_...
+```
+
+**Additional Cloud Variables:**
 - `PUSH_ONE_SIGNAL_APP_ID` (if using OneSignal)
 - `MAPBOX_TOKEN` (if using Mapbox)
 - Edge Functions: `SUPABASE_SERVICE_ROLE_KEY`
+
+**Benefits:**
+- ✅ Real authentication flow with Clerk
+- ✅ Production-ready data persistence
+- ✅ Sharable URLs for testing
+- ✅ Push notifications work
+- ✅ Ready for mobile app builds
+
+### Switching Between Environments
+1. **Update `.env` files** in `apps/mobile/` and `apps/admin/`
+2. **Restart dev servers** (Vite will auto-restart when .env changes)
+3. **Clear browser storage** if needed (localStorage, cookies)
+
+### Development Workflow
+1. **Start with Local** for fast iteration and testing
+2. **Test on Cloud** before committing major features
+3. **Deploy to Cloud** for production builds and app store submissions
+
+### Quick Commands
+
+**Start Local Supabase Stack:**
+```bash
+# Start all Supabase services (requires Docker Desktop)
+npx supabase start
+
+# Reset database with fresh migrations + seed data
+npx supabase db reset
+
+# Stop all Supabase services
+npx supabase stop
+
+# Check status and URLs
+npx supabase status
+```
+
+**Run Development Servers:**
+```bash
+# Mobile app (from project root)
+cd apps/mobile && npm run dev
+# Opens at: http://localhost:5173
+
+# Admin dashboard (from project root)  
+cd apps/admin && npm run dev
+# Opens at: http://localhost:5174
+
+# Or use root scripts:
+npm run dev:mobile   # runs mobile app
+npm run dev:admin    # runs admin app
+```
+
+**Useful Development Commands:**
+```bash
+# Install dependencies for all workspaces
+npm install
+
+# Build all apps
+npm run build
+
+# Open Supabase Studio (database management)
+open http://127.0.0.1:54323
+
+# View database directly
+psql postgresql://postgres:postgres@127.0.0.1:54322/postgres
+```
+
+**Typical Development Session:**
+```bash
+# 1. Start Supabase (once per session)
+npx supabase start
+
+# 2. Run mobile app (in separate terminal)
+cd apps/mobile && npm run dev
+
+# 3. Run admin app (optional, in separate terminal)
+cd apps/admin && npm run dev
+
+# 4. When done, stop Supabase (optional)
+npx supabase stop
+```
 
 ---
 

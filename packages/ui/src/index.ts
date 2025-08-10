@@ -19,4 +19,7 @@ export * from './components/description-list'
 export * from './components/textarea'
 export * from './components/alert'
 export * from './components/dialog'
+export * from './components/realtime-indicator'
+export * from './components/avatar'
+export * from './components/badge'
 

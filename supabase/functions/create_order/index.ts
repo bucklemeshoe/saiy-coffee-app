@@ -7,6 +7,8 @@ type CreateOrderPayload = {
   items: OrderItem[]
   pickup_time: string
   share_location?: boolean
+  // Optional PostGIS point (either GeoJSON-like object or WKT string)
+  current_location?: any
 }
 
 export const handler = async (req: Request): Promise<Response> => {
@@ -64,6 +66,8 @@ export const handler = async (req: Request): Promise<Response> => {
         items: payload.items,
         pickup_time: payload.pickup_time,
         share_location: Boolean(payload.share_location),
+        // Only set current_location if provided
+        ...(payload.current_location ? { current_location: payload.current_location } : {}),
         status: 'pending',
       })
       .select('id')

@@ -16,7 +16,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@saiy/ui": ["../../packages/ui/src"],
+      "order-app-ui": ["../../packages/ui/src"],
       "@saiy/lib": ["../../packages/lib/src"]
     },
 

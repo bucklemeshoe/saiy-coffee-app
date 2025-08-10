@@ -11,6 +11,8 @@
     "dev:admin": "npm --workspace admin run dev",
     "build": "npm run build -w mobile && npm run build -w admin",
     "lint": "echo 'No linter configured yet'"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11"
   }
 }
-

@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@saiy/lib': path.resolve(__dirname, '../../packages/lib/src'),
-      '@saiy/ui': path.resolve(__dirname, '../../packages/ui/src'),
+      'order-app-ui': path.resolve(__dirname, '../../packages/ui/src'),
     },
   },
 })
