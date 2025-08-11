@@ -1,5 +1,5 @@
 {
-  "name": "order-app-ui",
+  "name": "@order-app/ui",
   "version": "0.1.0",
   "private": true,
   "type": "module",

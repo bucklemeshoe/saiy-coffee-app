@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from 'react'
-import { useRealtimeOrders } from '@saiy/lib'
+import { useRealtimeOrders } from '@order-app/lib'
 import { useNotificationsStore } from '../store/notifications'
 import { useSupabase } from '../lib/useSupabase'
 import { useUser, useAuth } from '@clerk/clerk-react'

@@ -1,7 +1,7 @@
 import { Link, Route, Routes, Navigate } from 'react-router-dom'
 import { IonApp, IonPage, IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonMenuButton, setupIonicReact } from '@ionic/react'
 import { useMemo, useState } from 'react'
-import { createSupabaseWithExternalAuth } from '@saiy/lib'
+import { createSupabaseWithExternalAuth } from '@order-app/lib'
 import MenuPage from './pages/Menu'
 import CartPage from './pages/Cart'
 import CheckoutPage from './pages/Checkout'

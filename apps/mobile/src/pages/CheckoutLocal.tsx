@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useSupabase } from '../lib/useSupabase'
 import { useCartStore } from '../store/cart'
-import { locationToPostGIS } from '@saiy/lib'
+import { locationToPostGIS } from '@order-app/lib'
 import { LocationSharing } from '../components/LocationSharing'
 import { IonContent, IonCard, IonCardContent, IonButton, IonIcon, IonSelect, IonSelectOption, IonItem, IonLabel, IonNote, IonSpinner } from '@ionic/react'
 import { checkmarkCircleOutline, alertCircleOutline, timeOutline, arrowBackOutline } from 'ionicons/icons'

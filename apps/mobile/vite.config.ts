@@ -7,8 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@saiy/lib': path.resolve(__dirname, '../../packages/lib/src'),
-      'order-app-ui': path.resolve(__dirname, '../../packages/ui/src'),
+      '@order-app/lib': path.resolve(__dirname, '../../packages/lib/src'),
     },
   },
 })

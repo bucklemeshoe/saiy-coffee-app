@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { OrderCard } from './OrderCard'
-import { useRealtimeOrders } from '@saiy/lib'
+import { useRealtimeOrders } from '@order-app/lib'
 // TODO: Replace with Shadcn badge/status component
 
 interface Order {

@@ -17,7 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "order-app-ui": ["../../packages/ui/src"],
-      "@saiy/lib": ["../../packages/lib/src"]
+      "@order-app/lib": ["../../packages/lib/src"]
     },
 
     /* Linting */

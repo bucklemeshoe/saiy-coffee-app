@@ -1,6 +1,6 @@
 import { useAuth } from '@clerk/clerk-react'
 import { useMemo } from 'react'
-import { createSupabaseWithExternalAuth } from '@saiy/lib'
+import { createSupabaseWithExternalAuth } from '@order-app/lib'
 
 // Supports both Clerk-enabled and demo (no Clerk) modes.
 export function useSupabase() {

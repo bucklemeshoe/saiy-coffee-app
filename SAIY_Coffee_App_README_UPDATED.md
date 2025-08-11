@@ -1,8 +1,8 @@
 
-# 📱 SAIY Coffee App — MVP Build README (Updated Tech Stack)
+# 📱 Order App — MVP Build README (Updated Tech Stack)
 
 ## Overview
-We are building a **mobile ordering app** for SAIY Coffee (coffee truck in Cape Town).  
+We are building a **mobile ordering app** for Order App.  
 Customers can:
 - Create an account & profile
 - Browse the menu

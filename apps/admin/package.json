@@ -1,5 +1,5 @@
 {
-  "name": "admin",
+  "name": "order-app-admin",
   "private": true,
   "version": "0.0.0",
   "type": "module",

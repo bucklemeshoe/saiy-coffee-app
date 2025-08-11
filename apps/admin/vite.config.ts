@@ -12,8 +12,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@saiy/lib': path.resolve(__dirname, '../../packages/lib/src'),
-      'menu-admin': path.resolve(__dirname, '../../packages/menu-admin/src'),
+      '@order-app/lib': path.resolve(__dirname, '../../packages/lib/src'),
+      '@order-app/menu-admin': path.resolve(__dirname, '../../packages/menu-admin/src'),
     },
   },
 })

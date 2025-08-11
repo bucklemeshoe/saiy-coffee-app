@@ -1,5 +1,5 @@
 {
-  "name": "saiy-coffee-monorepo",
+  "name": "order-app-monorepo",
   "private": true,
   "version": "0.1.0",
   "workspaces": [
@@ -7,9 +7,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:mobile": "npm --workspace mobile run dev",
-    "dev:admin": "npm --workspace admin run dev",
-    "build": "npm run build -w mobile && npm run build -w admin",
+    "dev:mobile": "npm --workspace order-app-mobile run dev",
+    "dev:admin": "npm --workspace order-app-admin run dev",
+    "build": "npm run build -w order-app-mobile && npm run build -w order-app-admin",
     "lint": "echo 'No linter configured yet'"
   },
   "devDependencies": {

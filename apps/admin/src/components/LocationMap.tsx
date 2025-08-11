@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { calculateDistance } from '@saiy/lib'
+import { calculateDistance } from '@order-app/lib'
 
 interface LocationMapProps {
   // Can be PostGIS WKT string ("POINT(lon lat)"), GeoJSON { type, coordinates }, or {x,y}/{lon,lat}

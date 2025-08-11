@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 import { IonApp, IonPage, IonTabs, IonRouterOutlet, IonTabBar, IonTabButton, IonLabel, IonIcon, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonMenuButton, setupIonicReact } from '@ionic/react'
 import { useAuth } from '@clerk/clerk-react'
 import { useMemo, useState } from 'react'
-import { createSupabaseWithExternalAuth } from '@saiy/lib'
+import { createSupabaseWithExternalAuth } from '@order-app/lib'
 import MenuPage from './pages/Menu'
 import CartPage from './pages/Cart'
 import CheckoutPage from './pages/Checkout'
@@ -60,7 +60,7 @@ function App() {
               <IonMenuButton aria-label="Open menu">
                 <IonIcon icon={menuOutline} />
               </IonMenuButton>
-              <span className="ml-3 text-lg font-semibold text-white">Coffee App</span>
+              <span className="ml-3 text-lg font-semibold text-white">Order App</span>
             </IonButtons>
             
             <IonButtons slot="end">
@@ -100,9 +100,7 @@ function App() {
                         <span className="text-white text-4xl">☕</span>
                       </div>
                       <div className="space-y-2">
-                        <h1 className="text-3xl font-bold text-gray-900">
-                          Welcome to SAIY Coffee
-                        </h1>
+                        <h1 className="text-3xl font-bold text-gray-900">Welcome to Order App</h1>
                         <p className="text-gray-600 text-lg">
                           Freshly brewed, perfectly crafted
                         </p>

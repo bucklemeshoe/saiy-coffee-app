@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom'
 import { useMemo } from 'react'
 import AdminLayout from './layout/AdminLayout'
 import AdminPage from './pages/AdminPage'
-import { createSupabaseWithExternalAuth } from '@saiy/lib'
-import { useRealtimeOrders } from '@saiy/lib'
+import { createSupabaseWithExternalAuth } from '@order-app/lib'
+import { useRealtimeOrders } from '@order-app/lib'
 
 export function AppLocal() {
   // Local supabase client without Clerk

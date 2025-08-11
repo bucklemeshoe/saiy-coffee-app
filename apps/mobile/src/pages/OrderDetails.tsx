@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useAuth, useUser } from '@clerk/clerk-react'
-import { createSupabaseWithExternalAuth, useRealtimeOrder } from '@saiy/lib'
+import { createSupabaseWithExternalAuth, useRealtimeOrder } from '@order-app/lib'
 import { IonContent, IonCard, IonCardContent, IonButton, IonIcon, IonBadge, IonSpinner } from '@ionic/react'
 import { arrowBackOutline, locationOutline, timeOutline } from 'ionicons/icons'
 import { formatCurrency, formatDateTime } from '../utils/format'

@@ -1,4 +1,4 @@
-# SAIY Coffee App - Order Management System
+# Order App - Order Management System
 
 A modern, real-time coffee ordering and management system built with React, TypeScript, and Supabase.
 
@@ -50,7 +50,7 @@ A modern, real-time coffee ordering and management system built with React, Type
 ## 📁 Project Structure
 
 ```
-coffee-app/
+order-app/
 ├── apps/
 │   ├── admin/           # Admin dashboard (React + Shadcn)
 │   │   ├── src/
@@ -119,8 +119,8 @@ Pending → Preparing → Ready → Collected
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/bucklemeshoe/saiy-coffee-app.git
-   cd saiy-coffee-app
+   git clone https://github.com/bucklemeshoe/order-app.git
+   cd order-app
    ```
 
 2. **Install dependencies**
@@ -269,7 +269,7 @@ npx cap build android
 
 ## 📄 License
 
-This project is private and proprietary to SAIY Coffee.
+This project is private and proprietary to Order App.
 
 ## 🆘 Support
 

@@ -1,4 +1,4 @@
-# SAIY Coffee – Mobile App
+# Order App – Mobile App
 
 Commands:
 - Dev: `npm run dev`

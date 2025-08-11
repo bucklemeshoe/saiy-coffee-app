@@ -3,7 +3,7 @@ import { useSupabase } from '../lib/useSupabase'
 import { useCartStore } from '../store/cart'
 import { useUser, useAuth } from '@clerk/clerk-react'
 import { LocationSharing } from '../components/LocationSharing'
-import { locationToPostGIS } from '@saiy/lib'
+import { locationToPostGIS } from '@order-app/lib'
 import { IonContent, IonCard, IonCardContent, IonButton, IonIcon, IonSelect, IonSelectOption, IonItem, IonLabel, IonNote, IonSpinner } from '@ionic/react'
 import { checkmarkCircleOutline, alertCircleOutline, timeOutline, arrowBackOutline } from 'ionicons/icons'
 

@@ -1,9 +1,9 @@
 import { SignInButton, SignedIn, SignedOut, useAuth } from '@clerk/clerk-react'
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { createSupabaseWithExternalAuth } from '@saiy/lib'
+import { createSupabaseWithExternalAuth } from '@order-app/lib'
 import AdminPage from './pages/AdminPage'
-import { useRealtimeOrders } from '@saiy/lib'
+import { useRealtimeOrders } from '@order-app/lib'
 import AdminLayout from './layout/AdminLayout'
 
 function App() {

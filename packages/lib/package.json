@@ -1,5 +1,5 @@
 {
-  "name": "@saiy/lib",
+  "name": "@order-app/lib",
   "version": "0.1.0",
   "private": true,
   "type": "module",

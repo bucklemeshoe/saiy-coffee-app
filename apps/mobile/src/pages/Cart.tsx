@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useCartStore } from '../store/cart'
-// Removed @saiy/ui; using Ionic + native elements
+// Using Ionic + native elements
 import { IonContent, IonButton, IonIcon, IonCard, IonCardContent } from '@ionic/react'
 import { addOutline, removeOutline, trashOutline } from 'ionicons/icons'
 

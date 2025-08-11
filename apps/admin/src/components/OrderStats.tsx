@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useRealtimeOrders } from '@saiy/lib'
+import { useRealtimeOrders } from '@order-app/lib'
 
 interface OrderStatsProps {
   supabase: any

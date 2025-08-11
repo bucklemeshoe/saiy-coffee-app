@@ -16,8 +16,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@saiy/lib": ["../../packages/lib/src"],
-      "menu-admin": ["../../packages/menu-admin/src"]
+      "@order-app/lib": ["../../packages/lib/src"],
+      "@order-app/menu-admin": ["../../packages/menu-admin/src"]
     },
 
     /* Linting */

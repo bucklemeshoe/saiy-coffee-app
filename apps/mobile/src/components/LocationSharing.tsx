@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useGeolocation, locationToPostGIS } from '@saiy/lib'
+import { useGeolocation, locationToPostGIS } from '@order-app/lib'
 
 interface LocationSharingProps {
   onLocationChange: (enabled: boolean, location?: { latitude: number; longitude: number }) => void

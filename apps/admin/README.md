@@ -1,4 +1,4 @@
-# SAIY Coffee – Admin App
+# Order App – Admin App
 
 Commands:
 - Dev: `npm run dev`
